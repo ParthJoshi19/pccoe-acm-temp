@@ -13,12 +13,7 @@ export default function Home() {
   useEffect(() => {
     setIsClient(true);
 
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current!,
-      smooth: true,
-      lerp: 0.08,
-      getDirection: true,
-    });
+    const scroll = new LocomotiveScroll();
 
     return () => {
       scroll.destroy();

@@ -1,0 +1,26 @@
+
+  .logo-acm{
+    stroke: #fff;
+    stroke-width: 3px;
+    animation: draw 8s ease;
+  }
+
+  .logo-acm-curve {
+    transition: fill 0.5s ease-in-out;
+  }
+
+  @keyframes draw {
+    0%{
+      stroke-dashoffset: 4500;
+    }
+    100%{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @font-face {
+    font-family: 'michroma';
+    src: url('./../public/fonts/Michroma/Michroma-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

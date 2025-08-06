@@ -4,7 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import AnimatedNavbar from "@/components/animated-navbar";
 import Loader from "@/components/Loader";
 import gsap from 'gsap';
-
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 const MainComponent = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const loaderRef = useRef<HTMLDivElement>(null);

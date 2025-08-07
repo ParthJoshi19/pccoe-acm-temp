@@ -27,12 +27,13 @@ const teamMembers = [
   { position: "Technical Team", name: "Piyush Patil", image: "url/to/image", color: pastelColors[7] },
   { position: "Technical Team", name: "Virjeet Kakekar", image: "url/to/image", color: pastelColors[8] },
 
-  { position: "Marketing Team", name: "Aayush Kolhe", image: "url/to/image", color: pastelColors[9] },
+  
   { position: "Marketing Team", name: "Bhavya Shah", image: "url/to/image", color: pastelColors[10] },
-  { position: "Marketing Team", name: "Hrishikesh Patil", image: "url/to/image", color: pastelColors[11] },
-  { position: "Marketing Team", name: "Preksha Gangwal", image: "url/to/image", color: pastelColors[12] },
   { position: "Marketing Team", name: "Shravani Sonigra", image: "url/to/image", color: pastelColors[13] },
-
+  { position: "Marketing Team", name: "Preksha Gangwal", image: "url/to/image", color: pastelColors[12] },
+  { position: "Marketing Team", name: "Hrishikesh Patil", image: "url/to/image", color: pastelColors[11] },
+  { position: "Marketing Team", name: "Aayush Kolhe", image: "url/to/image", color: pastelColors[9] },
+  
   { position: "Design Team", name: "Mayur Jogde", image: "url/to/image", color: pastelColors[14] },
   { position: "Design Team", name: "Nehal Kongwad", image: "url/to/image", color: pastelColors[15] },
   { position: "Design Team", name: "Pranil Sakpal", image: "url/to/image", color: pastelColors[16] },

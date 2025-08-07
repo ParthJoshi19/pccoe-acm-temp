@@ -65,9 +65,10 @@ a{
   position: fixed; /* changed from absolute */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 50vh;
   overflow: hidden;
+  filter:blur(1px);
   background: #aaaaaa; /* base */
   z-index: 0; /* allow images to be shown behind slides */
   pointer-events: none; /* ensure it's non-interactive */

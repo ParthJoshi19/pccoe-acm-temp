@@ -134,7 +134,7 @@ const Page = () => {
 
       <div className="active-slide h-[50%]">
         {teamMembers.map((member, idx) => (
-          <img key={idx} src="./amc-pccoe-logo.png" alt={member.name} className="img object-contain min-h-screen" />
+          <img key={idx} src="./amc-pccoe-logo.png" alt={member.name} className="im object-contain " />
         ))}
       </div>
 

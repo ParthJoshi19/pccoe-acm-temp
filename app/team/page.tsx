@@ -17,15 +17,15 @@ const pastelColors = [
 ];
 const teamMembers = [
   { position: "Web Master", name: "Keyura Motegaokar", image: "url/to/image", color: pastelColors[0] },
-  { position: "Web Master", name: "Path Joshi", image: "url/to/image", color: pastelColors[1] },
-  { position: "Web Master", name: "Pruthviraj Kale", image: "url/to/image", color: pastelColors[2] },
-  { position: "Web Master", name: "Rahul Landge", image: "url/to/image", color: pastelColors[3] },
   { position: "Web Master", name: "Vaishnavi Gaikwad", image: "url/to/image", color: pastelColors[4] },
+  { position: "Web Master", name: "Rahul Landge", image: "url/to/image", color: pastelColors[3] },
+  { position: "Web Master", name: "Pruthviraj Kale", image: "url/to/image", color: pastelColors[2] },
+  { position: "Web Master", name: "Path Joshi", image: "url/to/image", color: pastelColors[1] },
 
-  { position: "Technical Team", name: "Harshal Patil", image: "url/to/image", color: pastelColors[5] },
-  { position: "Technical Team", name: "Parikshit Rajpurohit", image: "url/to/image", color: pastelColors[6] },
-  { position: "Technical Team", name: "Piyush Patil", image: "url/to/image", color: pastelColors[7] },
   { position: "Technical Team", name: "Virjeet Kakekar", image: "url/to/image", color: pastelColors[8] },
+  { position: "Technical Team", name: "Harshal Patil", image: "url/to/image", color: pastelColors[5] },
+  { position: "Technical Team", name: "Piyush Patil", image: "url/to/image", color: pastelColors[7] },
+  { position: "Technical Team", name: "Parikshit Rajpurohit", image: "url/to/image", color: pastelColors[6] },
 
   
   { position: "Marketing Team", name: "Bhavya Shah", image: "url/to/image", color: pastelColors[10] },

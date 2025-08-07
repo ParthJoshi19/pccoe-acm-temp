@@ -133,7 +133,7 @@ const Page = () => {
   return (
     <div className="min-h-screen container" ref={scrollRef}>
 
-      <div className="active-slide h-[50%]">
+      <div className="active-slide ">
         {teamMembers.map((member, idx) => (
           <img key={idx} src="./amc-pccoe-logo.png" alt={member.name} className="im object-contain " />
         ))}

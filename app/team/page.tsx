@@ -132,7 +132,7 @@ const Page = () => {
   return (
     <div className="min-h-screen container" ref={scrollRef}>
 
-      <div className="active-slide">
+      <div className="active-slide h-[50%]">
         {teamMembers.map((member, idx) => (
           <img key={idx} src="./amc-pccoe-logo.png" alt={member.name} className="img object-contain min-h-screen" />
         ))}

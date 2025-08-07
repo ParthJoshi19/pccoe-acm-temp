@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Team.css";
 import gsap from "gsap";
+import logo from "@/public/amc-pccoe-logo.png";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
@@ -133,7 +134,7 @@ const Page = () => {
 
       <div className="active-slide">
         {teamMembers.map((member, idx) => (
-          <img key={idx} src={member.image} alt={member.name} className="img object-contain min-h-screen" />
+          <img key={idx} src={logo} alt={member.name} className="img object-contain min-h-screen" />
         ))}
       </div>
 

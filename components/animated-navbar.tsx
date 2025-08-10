@@ -100,7 +100,7 @@ export default function AnimatedNavbar() {
   };
   return (
     <nav
-      className={`fixed font-[Michroma]  z-50 transition-all text-black duration-500 mt-6 rounded-full w-screen bg-opacity-90 backdrop-blur-2xl shadow-inner`}
+      className={`fixed font-[Michroma]  z-50 transition-all text-white duration-500 mt-6 rounded-full w-screen bg-opacity-90 backdrop-blur-2xl shadow-inner`}
     >
       <div className="px-6 py-4">
         <div className="flex items-center justify-between">

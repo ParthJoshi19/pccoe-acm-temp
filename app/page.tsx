@@ -2,56 +2,15 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
 import AnimatedNavbar from "@/components/animated-navbar";
-
-const infoCards = [
-  {
-    title: "Innovation",
-    description:
-      "Driving technological advancement through cutting-edge research and development in computer science.",
-    bgColor: "bg-white",
-    textColor: "text-black",
-    border: "border border-blue-200",
-    scrollSpeed: "8",
-    marginLeft: "ml-0",
-  },
-  {
-    title: "Community",
-    description:
-      "Building a strong network of passionate developers, researchers, and tech enthusiasts.",
-    bgColor: "bg-blue-600",
-    textColor: "text-white",
-    border: "",
-    scrollSpeed: "6",
-    marginLeft: "ml-12",
-  },
-  {
-    title: "Excellence",
-    description:
-      "Striving for the highest standards in education, research, and professional development.",
-    bgColor: "bg-white",
-    textColor: "text-black",
-    border: "border border-blue-200",
-    scrollSpeed: "4",
-    marginLeft: "ml-24",
-  },
-  {
-    title: "Future",
-    description:
-      "Preparing the next generation of computer scientists for tomorrow's challenges.",
-    bgColor: "bg-blue-800",
-    textColor: "text-white",
-    border: "",
-    scrollSpeed: "2",
-    marginLeft: "ml-36",
-  },
-];
-
-
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
-
+  const titleRef = useRef<HTMLDivElement>(null);
+  const planetRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!scrollRef.current) return;
 
@@ -61,6 +20,16 @@ export default function Home() {
       lerp: 0.08,
     });
 
+    gsap.to(planetRef.current, {
+      y: 100,
+      duration: 0.8,
+    });
+
+    gsap.to(titleRef.current, {
+      y: -50,
+      duration: 0.8,
+    });
+
     return () => {
       scroll.destroy();
     };
@@ -68,57 +37,45 @@ export default function Home() {
 
   return (
     <div ref={scrollRef} className="main" data-scroll data-scroll-container>
-      <AnimatedNavbar />
-
       <section
-        className="min-h-screen flex items-center text-black font-[michroma] text-9xl justify-center bg-white"
-        data-scroll-sticky
+        className="min-h-screen flex items-center text-white bg-[#0A0F1E] font-[michroma] justify-center relative overflow-hidden"
         data-scroll-target=".main"
       >
-        PCCOE ACM
+        {/* Glowing bottom border circle */}
+        <div
+          ref={planetRef}
+          className="absolute h-[1000px] w-[1000px] -top-[600px] z-1 rounded-full border-b-8 border-[#00AEEF]
+             shadow-[0_20px_40px_#00AEEF] before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-b-[40px] before:border-[#00AEEF]/50 before:blur-[40px]"
+        ></div>
+
+
+        <div className="relative z-10 mt-[100px]">
+          <p
+            ref={titleRef}
+            className="relative z-10 lg:text-9xl text-3xl text-white drop-shadow-[0_0_10px_#00AEEF]"
+          >
+            PCCOE ACM
+          </p>
+
+          {/* Blue glow layer */}
+          <p
+            className="absolute inset-0 text-[#00AEEF] blur-lg opacity-70 animate-pulse select-none"
+            aria-hidden="true"
+          >
+            PCCOE ACM
+          </p>
+
+          {/* Scan-line effect */}
+          <span className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-transparent animate-scan" />
+        </div>
       </section>
 
-      <section
-        className="min-h-screen cards bg-gradient-to-br from-blue-50 to-blue-100 py-20 px-8"
-        data-scroll-section
-      >
+      <section className="min-h-screen cards py-20 px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="relative space-y-8">
-            {infoCards.map((card, index) => (
-              <div
-                key={index}
-                className={`${card.bgColor} ${card.border} ${card.marginLeft} rounded-2xl p-8 shadow-lg`}
-                data-scroll
-                data-scroll-sticky
-                data-scroll-target=".cards"
-                data-scroll-speed={card.scrollSpeed}
-                data-scroll-direction="vertical"
-                data-scroll-delay={index * 0.1}
-              >
-                <h3 className={`${card.textColor} font-michroma text-2xl mb-4`}>
-                  {card.title}
-                </h3>
-                <p
-                  className={`${
-                    card.textColor === "text-white"
-                      ? "text-blue-100"
-                      : "text-gray-700"
-                  } text-lg leading-relaxed`}
-                >
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <div className="relative space-y-8"></div>
 
-          {/* Additional animated elements */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              className="text-center"
-              data-scroll
-              data-scroll-speed="3"
-              data-scroll-direction="horizontal"
-            >
+            <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4"></div>
               <h4 className="text-black font-michroma text-lg">Research</h4>
             </div>
@@ -148,11 +105,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center"
-        data-scroll-section
-      >
-        <div className="text-center" data-scroll data-scroll-speed="4">
+      <section className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+        <div className="text-center">
           <h2 className="text-white font-michroma text-6xl mb-8">Join Us</h2>
           <p className="text-blue-100 text-xl max-w-2xl mx-auto">
             Be part of the future of computing at PCCOE ACM

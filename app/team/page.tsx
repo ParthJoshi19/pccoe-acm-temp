@@ -137,7 +137,7 @@ const Page = () => {
   {teamMembers.map((member, idx) => (
     <div
       key={idx}
-      className="absolute top-0 left-0 w-full h-full flex justify-center items-center"
+      className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center"
       style={{ backgroundColor: member.color }}
     >
       <img

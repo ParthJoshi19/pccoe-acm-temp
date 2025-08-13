@@ -65,8 +65,6 @@ a{
   position: fixed; /* changed from absolute */
   top: 0;
   left: 0;
-  width: 50vw;
-  height: 50vh;
   overflow: hidden;
   filter:blur(1px);
   background: #aaaaaa; /* base */

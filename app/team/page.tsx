@@ -133,12 +133,22 @@ const Page = () => {
   return (
     <div className="min-h-screen container" ref={scrollRef}>
 
-      <div className="active-slide ">
-        {teamMembers.map((member, idx) => (
-          //<img key={idx} src="./amc-pccoe-logo.png" alt={member.name} className="im object-contain " />
-          <div className="min-h-screen w-screen" style={{background:`${member.color}`}}></div>
-        ))}
-      </div>
+      <div className="active-slide relative w-screen min-h-screen overflow-hidden">
+  {teamMembers.map((member, idx) => (
+    <div
+      key={idx}
+      className="absolute top-0 left-0 w-full h-full flex justify-center items-center"
+      style={{ backgroundColor: member.color }}
+    >
+      <img
+        src={member.image}
+        alt={member.name}
+        className="object-contain rounded-full border-4"
+        style={{ maxHeight: '60vh', maxWidth: '60vw', opacity: 0 }}
+      />
+    </div>
+  ))}
+</div>
 
       <div className="slider">
         {teamMembers.map((member, idx) => (
